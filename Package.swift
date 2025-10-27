@@ -17,15 +17,15 @@ let package = Package(
         // --- Core Target ---
         .target(
             name: "MonoRepoCore",
-            path: "MonoRepoCore",
-            dependencies: [] // Core has no internal dependencies in this example
+            dependencies: [], // Core has no internal dependencies in this example
+            path: "MonoRepoCore"
         ),
 
         // --- Networking Target ---
         .target(
             name: "MonoRepoNetworking",
-            path: "MonoRepoNetworking",
-            dependencies: ["MonoRepoCore"] // 👈 **Networking depends on Core**
+            dependencies: ["MonoRepoCore"], // 👈 **Networking depends on Core**
+            path: "MonoRepoNetworking"
         )
     ]
 )
