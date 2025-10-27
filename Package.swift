@@ -9,6 +9,8 @@ let package = Package(
         // Define your libraries as products so they can be used externally
         .library(name: "MonoRepoCore", targets: ["MonoRepoCore"]),
         .library(name: "MonoRepoNetworking", targets: ["MonoRepoNetworking"]),
+        .library(name: "Destination01", targets: ["Destination01"]),
+        .library(name: "Destination02", targets: ["Destination02"])
     ],
     dependencies: [
         // If you had external dependencies, they would go here
@@ -26,6 +28,20 @@ let package = Package(
             name: "MonoRepoNetworking",
             dependencies: ["MonoRepoCore"], // 👈 **Networking depends on Core**
             path: "MonoRepoNetworking"
+        ),
+        
+        // --- Networking Target ---
+        .target(
+            name: "Destination01",
+            dependencies: ["MonoRepoCore"], // 👈 **Destination01 depends on Core**
+            path: "Destinations/Destination01"
+        ),
+        
+        // --- Networking Target ---
+        .target(
+            name: "Destination02",
+            dependencies: ["MonoRepoCore", "MonoRepoNetworking"], // 👈 **Destination02 depends on Core & Networking**
+            path: "Destinations/Destination02"
         )
     ]
 )
