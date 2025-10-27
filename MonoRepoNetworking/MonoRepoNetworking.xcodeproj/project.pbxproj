@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		537D9AB92EAE42EB00F11DDE /* MonoRepoNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 537D9AAF2EAE42EB00F11DDE /* MonoRepoNetworking.framework */; };
+		53E4DD112EAFA4B700AAA886 /* MonoRepoCore in Frameworks */ = {isa = PBXBuildFile; productRef = 53E4DD102EAFA4B700AAA886 /* MonoRepoCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53E4DD112EAFA4B700AAA886 /* MonoRepoCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +130,7 @@
 			);
 			name = MonoRepoNetworking;
 			packageProductDependencies = (
+				53E4DD102EAFA4B700AAA886 /* MonoRepoCore */,
 			);
 			productName = MonoRepoNetworking;
 			productReference = 537D9AAF2EAE42EB00F11DDE /* MonoRepoNetworking.framework */;
@@ -180,6 +183,9 @@
 			);
 			mainGroup = 537D9AA52EAE42EB00F11DDE;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				53E4DD0F2EAFA4B700AAA886 /* XCLocalSwiftPackageReference "../MonoRepoCore" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 537D9AB02EAE42EB00F11DDE /* Products */;
 			projectDirPath = "";
@@ -539,6 +545,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		53E4DD0F2EAFA4B700AAA886 /* XCLocalSwiftPackageReference "../MonoRepoCore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../MonoRepoCore;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		53E4DD102EAFA4B700AAA886 /* MonoRepoCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MonoRepoCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 537D9AA62EAE42EB00F11DDE /* Project object */;
 }
