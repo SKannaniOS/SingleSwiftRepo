@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		537D9AB92EAE42EB00F11DDE /* MonoRepoNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 537D9AAF2EAE42EB00F11DDE /* MonoRepoNetworking.framework */; };
-		53E4DD112EAFA4B700AAA886 /* MonoRepoCore in Frameworks */ = {isa = PBXBuildFile; productRef = 53E4DD102EAFA4B700AAA886 /* MonoRepoCore */; };
+		53E4DD2C2EAFA79200AAA886 /* MonoRepoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E4DD282EAFA78800AAA886 /* MonoRepoCore.framework */; };
+		53E4DD2D2EAFA79200AAA886 /* MonoRepoCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 53E4DD282EAFA78800AAA886 /* MonoRepoCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -19,11 +20,33 @@
 			remoteGlobalIDString = 537D9AAE2EAE42EB00F11DDE;
 			remoteInfo = MonoRepoNetworking;
 		};
+		53E4DD272EAFA78800AAA886 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53E4DD192EAFA78800AAA886 /* MonoRepoCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 537B96562EAE3B3300E3ADE7;
+			remoteInfo = MonoRepoCore;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		53E4DD2E2EAFA79200AAA886 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				53E4DD2D2EAFA79200AAA886 /* MonoRepoCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		537D9AAF2EAE42EB00F11DDE /* MonoRepoNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MonoRepoNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		537D9AB82EAE42EB00F11DDE /* MonoRepoNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonoRepoNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		53E4DD192EAFA78800AAA886 /* MonoRepoCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MonoRepoCore.xcodeproj; path = ../MonoRepoCore/MonoRepoCore.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -65,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53E4DD112EAFA4B700AAA886 /* MonoRepoCore in Frameworks */,
+				53E4DD2C2EAFA79200AAA886 /* MonoRepoCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,8 +106,10 @@
 		537D9AA52EAE42EB00F11DDE = {
 			isa = PBXGroup;
 			children = (
+				53E4DD192EAFA78800AAA886 /* MonoRepoCore.xcodeproj */,
 				53CBE7FC2EAE713A001BA074 /* Sources */,
 				53CBE8002EAE7144001BA074 /* Tests */,
+				53E4DD2B2EAFA79200AAA886 /* Frameworks */,
 				537D9AB02EAE42EB00F11DDE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,6 +121,21 @@
 				537D9AB82EAE42EB00F11DDE /* MonoRepoNetworkingTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		53E4DD232EAFA78800AAA886 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				53E4DD282EAFA78800AAA886 /* MonoRepoCore.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		53E4DD2B2EAFA79200AAA886 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +159,7 @@
 				537D9AAB2EAE42EB00F11DDE /* Sources */,
 				537D9AAC2EAE42EB00F11DDE /* Frameworks */,
 				537D9AAD2EAE42EB00F11DDE /* Resources */,
+				53E4DD2E2EAFA79200AAA886 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,7 +171,6 @@
 			);
 			name = MonoRepoNetworking;
 			packageProductDependencies = (
-				53E4DD102EAFA4B700AAA886 /* MonoRepoCore */,
 			);
 			productName = MonoRepoNetworking;
 			productReference = 537D9AAF2EAE42EB00F11DDE /* MonoRepoNetworking.framework */;
@@ -184,11 +224,16 @@
 			mainGroup = 537D9AA52EAE42EB00F11DDE;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				53E4DD0F2EAFA4B700AAA886 /* XCLocalSwiftPackageReference "../MonoRepoCore" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 537D9AB02EAE42EB00F11DDE /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 53E4DD232EAFA78800AAA886 /* Products */;
+					ProjectRef = 53E4DD192EAFA78800AAA886 /* MonoRepoCore.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				537D9AAE2EAE42EB00F11DDE /* MonoRepoNetworking */,
@@ -196,6 +241,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		53E4DD282EAFA78800AAA886 /* MonoRepoCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MonoRepoCore.framework;
+			remoteRef = 53E4DD272EAFA78800AAA886 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		537D9AAD2EAE42EB00F11DDE /* Resources */ = {
@@ -545,20 +600,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCLocalSwiftPackageReference section */
-		53E4DD0F2EAFA4B700AAA886 /* XCLocalSwiftPackageReference "../MonoRepoCore" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../MonoRepoCore;
-		};
-/* End XCLocalSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		53E4DD102EAFA4B700AAA886 /* MonoRepoCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = MonoRepoCore;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 537D9AA62EAE42EB00F11DDE /* Project object */;
 }
